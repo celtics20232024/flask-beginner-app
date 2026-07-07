@@ -1,0 +1,19 @@
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
+
+class Task(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+
+    # ƒ^ƒCƒgƒ‹
+    title = db.Column(db.String(100), nullable=False)
+
+    # Ú×
+    description = db.Column(db.Text)
+
+    # ’÷Ø“ú
+    deadline = db.Column(db.Date)
+
+    # Š®—¹ó‘Ô
+    completed = db.Column(db.Boolean, default=False)
