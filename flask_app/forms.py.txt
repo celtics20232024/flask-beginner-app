@@ -1,0 +1,14 @@
+from flask_wtf import FlaskForm
+from wtforms import StringField, TextAreaField, DateField, BooleanField, SubmitField
+from wtforms.validators import DataRequired
+
+class TaskForm(FlaskForm):
+    # TODO：タイトルの入力欄を定義して下さい
+
+    # TODO：詳細の入力欄を定義して下さい
+
+    # TODO：締切日の入力欄を定義して下さい
+
+    # TODO：完了状態を表すチェックボックスを定義して下さい
+
+    # TODO：送信ボタンを定義して下さい
