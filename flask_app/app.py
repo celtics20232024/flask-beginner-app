@@ -26,12 +26,15 @@ def add_task():
     # TODO：新しいタスクを追加する処理を記述して下さい
     
     if form.validate_on_submit():
-    	task=Task(title=form.title.data)
-    	
-    	db.session.add(task)
-    	db.session.commit()
-    	
-    	return redirect(url_for("index"))
+        task=Task(title=form.title.data)
+        task.title = form.title.data
+        task.description = form.description.data
+        task.deadline = form.deadline.data
+        task.completed = form.completed.data
+        db.session.add(task)
+        db.session.commit()
+        
+        return redirect(url_for("index"))
     return render_template("add_task.html",form=form)
     
 
