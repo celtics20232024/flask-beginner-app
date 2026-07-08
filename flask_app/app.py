@@ -47,7 +47,7 @@ def edit_task(task_id):
 
         return redirect(url_for("index"))
 
-    return render_template("edit.html", form=form)
+    return render_template("edit_task.html", form=form)
 
 @app.route("/delete/<int:task_id>")
 def delete_task(task_id):
