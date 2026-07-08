@@ -32,7 +32,7 @@ def add_task():
     	db.session.commit()
     	
     	return redirect(url_for("index"))
-    return render_templete("add.html",form=form)
+    return render_template("add_task.html",form=form)
     
 
 @app.route("/edit/<int:task_id>", methods=["GET", "POST"])
