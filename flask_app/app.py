@@ -42,7 +42,9 @@ def edit_task(task_id):
 
     if form.validate_on_submit():
         task.title = form.title.data
-
+        task.description = form.description.data
+        task.deadline = form.deadline.data
+        task.completed = form.completed.data
         db.session.commit()
 
         return redirect(url_for("index"))
